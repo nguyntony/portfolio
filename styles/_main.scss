@@ -1,5 +1,3 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-// @import url(fontawesome-all.min.css);
 $Noto: "Noto Sans JP", sans-serif;
 
 #main {
@@ -7,7 +5,7 @@ $Noto: "Noto Sans JP", sans-serif;
     height: 90vh;
     grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
     grid-template-rows: 20% 1fr 20%;
-    overflow: hidden;
+    // overflow: hidden;
 
     nav {
         grid-area: 1 / 2 / span 1 / span 1;
@@ -27,6 +25,15 @@ $Noto: "Noto Sans JP", sans-serif;
             background-color: #ff9e8b;
             border-radius: 1.5rem;
             box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+
+            //glass
+            background-color: #ff9e8b;
+            backdrop-filter: blur(40px);
+            // border: solid 2px;
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+            border-radius: 2rem;
+            padding: 2rem 4rem;
 
             li {
                 margin: 2rem 2rem;
@@ -141,6 +148,48 @@ $Noto: "Noto Sans JP", sans-serif;
     #skills {
         grid-area: 3 / 1 / span 1 / span 4;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        font-family: $Noto;
+
+        h3 {
+            font-size: 2rem;
+            // transform: translateY(225%);
+            // z-index: 1;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            font-size: 1.5rem;
+            // font-family: $Noto;
+            align-items: center;
+            transform: translateY(20%);
+
+            // glassmorphism stuff
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(40px);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+            border-radius: 3rem;
+            padding: 2rem 4rem;
+
+            // img {
+            //     transform: scale(0.3);
+            // }
+
+            i {
+                font-size: 5rem;
+            }
+
+            li {
+                margin: 0rem 2.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 }
