@@ -1,0 +1,146 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+// @import url(fontawesome-all.min.css);
+$Noto: "Noto Sans JP", sans-serif;
+
+#main {
+    display: grid;
+    height: 90vh;
+    grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+    grid-template-rows: 20% 1fr 20%;
+    overflow: hidden;
+
+    nav {
+        grid-area: 1 / 2 / span 1 / span 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transform: translateY(90%);
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: $Noto;
+            font-size: 2rem;
+            height: 8rem;
+            background-color: #ff9e8b;
+            border-radius: 1.5rem;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+
+            li {
+                margin: 2rem 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(70, 70, 70);
+                    font-weight: 700;
+                }
+
+                a:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #card {
+        grid-area: 2 / 2 / span 1 / span 1;
+
+        #headshot {
+            height: 30rem;
+            width: 30rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid transparent;
+            margin: auto;
+            transform: translate(-75%, -20%);
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+        #bio {
+            min-width: 40rem;
+            max-width: 60rem;
+            font-family: $Noto;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            transform: translateY(-45%);
+
+            // glassmorphism stuff
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(40px);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+            border-radius: 3rem;
+            padding: 2rem 4rem;
+
+            h2,
+            h3 {
+                font-size: 5rem;
+                color: rgb(45, 45, 45);
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: rgb(55, 55, 55);
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                align-self: flex-end;
+                justify-content: space-around;
+                font-size: 2.5rem;
+                width: 8.5rem;
+
+                a {
+                    color: rgb(70, 70, 70);
+                }
+
+                li {
+                    border-radius: 50%;
+                    padding: 0rem 0.8rem;
+                    padding-bottom: 0.2rem;
+                }
+
+                li:hover {
+                    background-color: #f6a190;
+                    transition: 1.2s;
+                    border-radius: 50%;
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    #bg {
+        grid-area: 1 / 1 / span 4 / span 4;
+        background: url(/images/unedited/blob.svg);
+        background-repeat: no-repeat;
+        height: 150rem;
+        width: 100%;
+        position: absolute;
+        top: -5rem;
+        left: -55rem;
+        z-index: -1;
+    }
+
+    #skills {
+        grid-area: 3 / 1 / span 1 / span 4;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,206 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main {
+  display: -ms-grid;
+  display: grid;
+  height: 90vh;
+  -ms-grid-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+      grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+  -ms-grid-rows: 20% 1fr 20%;
+      grid-template-rows: 20% 1fr 20%;
+  overflow: hidden;
+}
+
+#main nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / span 1 / span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
+}
+
+#main nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  height: 8rem;
+  background-color: #ff9e8b;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+}
+
+#main nav ul li {
+  margin: 2rem 2rem;
+}
+
+#main nav ul li a {
+  text-decoration: none;
+  color: #464646;
+  font-weight: 700;
+}
+
+#main nav ul li a:hover {
+  color: white;
+}
+
+#main #card {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#main #card #headshot {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  margin: auto;
+  -webkit-transform: translate(-75%, -20%);
+          transform: translate(-75%, -20%);
+}
+
+#main #card #headshot img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+#main #card #bio {
+  min-width: 40rem;
+  max-width: 60rem;
+  font-family: "Noto Sans JP", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 3rem;
+  padding: 2rem 4rem;
+}
+
+#main #card #bio h2,
+#main #card #bio h3 {
+  font-size: 5rem;
+  color: #2d2d2d;
+}
+
+#main #card #bio h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#main #card #bio p {
+  font-size: 1.5rem;
+  color: #373737;
+}
+
+#main #card #bio ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.5rem;
+  width: 8.5rem;
+}
+
+#main #card #bio ul a {
+  color: #464646;
+}
+
+#main #card #bio ul li {
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+#main #card #bio ul li:hover {
+  background-color: #f6a190;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  border-radius: 50%;
+}
+
+#main #card #bio ul li:hover a {
+  color: white;
+}
+
+#main #bg {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 1 / span 4 / span 4;
+  background: url(/images/unedited/blob.svg);
+  background-repeat: no-repeat;
+  height: 150rem;
+  width: 100%;
+  position: absolute;
+  top: -5rem;
+  left: -55rem;
+  z-index: -1;
+}
+
+#main #skills {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 3 / 1 / span 1 / span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */

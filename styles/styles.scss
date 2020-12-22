@@ -1,0 +1,12 @@
+html {
+    font-size: 62.5%;
+    // this percent when converting to rem will equal to 10px
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // removes any default styling the browser may have
+}
+
+@import "main";
