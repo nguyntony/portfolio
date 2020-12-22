@@ -5,16 +5,17 @@ $Noto: "Noto Sans JP", sans-serif;
     height: 90vh;
     grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
     grid-template-rows: 20% 1fr 20%;
-    // overflow: hidden;
 
     nav {
         grid-area: 1 / 2 / span 1 / span 1;
         display: flex;
         justify-content: flex-end;
+        margin-right: 15rem;
         align-items: center;
-        transform: translateY(90%);
+        transform: translateY(45%);
 
         ul {
+            // come back and clean this up
             list-style: none;
             display: flex;
             align-items: center;
@@ -26,10 +27,10 @@ $Noto: "Noto Sans JP", sans-serif;
             border-radius: 1.5rem;
             box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
 
-            //glass
-            background-color: #ff9e8b;
+            // glassmorphism stuff
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(40px);
-            // border: solid 2px;
+            border: solid 2px transparent;
             background-clip: padding-box;
             box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
             border-radius: 2rem;
@@ -45,7 +46,7 @@ $Noto: "Noto Sans JP", sans-serif;
                 }
 
                 a:hover {
-                    color: white;
+                    color: #f6a190;
                 }
             }
         }
@@ -123,7 +124,7 @@ $Noto: "Noto Sans JP", sans-serif;
 
                 li:hover {
                     background-color: #f6a190;
-                    transition: 1.2s;
+                    transition: 0.3s;
                     border-radius: 50%;
                     a {
                         color: white;
@@ -134,38 +135,29 @@ $Noto: "Noto Sans JP", sans-serif;
     }
 
     #bg {
-        grid-area: 1 / 1 / span 4 / span 4;
-        background: url(/images/unedited/blob.svg);
+        grid-area: 2 / 1 / span 1 / span 4;
+        background: url(/images/unedited/option2.jpg);
         background-repeat: no-repeat;
-        height: 150rem;
-        width: 100%;
-        position: absolute;
-        top: -5rem;
-        left: -55rem;
+        background-position: 0% 55%;
+        background-size: 2000px;
+        position: relative;
         z-index: -1;
     }
 
     #skills {
-        grid-area: 3 / 1 / span 1 / span 4;
+        grid-area: 3 / 2 / span 1 / span 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         font-family: $Noto;
 
-        h3 {
-            font-size: 2rem;
-            // transform: translateY(225%);
-            // z-index: 1;
-        }
-
-        ul {
+        div {
             display: flex;
-            list-style: none;
-            font-size: 1.5rem;
-            // font-family: $Noto;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            transform: translateY(20%);
+            height: 20rem;
+            transform: translateY(-40%);
 
             // glassmorphism stuff
             background: rgba(255, 255, 255, 0.2);
@@ -176,19 +168,32 @@ $Noto: "Noto Sans JP", sans-serif;
             border-radius: 3rem;
             padding: 2rem 4rem;
 
-            // img {
-            //     transform: scale(0.3);
-            // }
-
-            i {
-                font-size: 5rem;
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                align-self: flex-start;
+                color: rgb(45, 45, 45);
             }
 
-            li {
-                margin: 0rem 2.5rem;
+            ul {
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                font-size: 1.5rem;
                 align-items: center;
+
+                i {
+                    font-size: 5rem;
+                }
+
+                li {
+                    margin: 0rem 2.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: rgb(70, 70, 70);
+                }
             }
         }
     }
