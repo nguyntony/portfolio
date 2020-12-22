@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 * {
@@ -9,179 +10,32 @@ html {
           box-sizing: border-box;
 }
 
-#main {
-  display: -ms-grid;
-  display: grid;
-  height: 90vh;
-  -ms-grid-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
-      grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
-  -ms-grid-rows: 20% 1fr 20%;
-      grid-template-rows: 20% 1fr 20%;
-}
-
-#main nav {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 2 / span 1 / span 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 15rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translateY(45%);
-          transform: translateY(45%);
-}
-
-#main nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 2rem;
-  height: 8rem;
-  background-color: #ff9e8b;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  border: solid 2px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  border-radius: 2rem;
-  padding: 2rem 4rem;
-}
-
-#main nav ul li {
-  margin: 2rem 2rem;
-}
-
-#main nav ul li a {
-  text-decoration: none;
-  color: #464646;
-  font-weight: 700;
-}
-
-#main nav ul li a:hover {
-  color: #f6a190;
-}
-
-#main #card {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 2 / span 1 / span 1;
-}
-
-#main #card #headshot {
-  height: 30rem;
-  width: 30rem;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid transparent;
-  margin: auto;
-  -webkit-transform: translate(-75%, -20%);
-          transform: translate(-75%, -20%);
-}
-
-#main #card #headshot img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-}
-
-#main #card #bio {
-  min-width: 40rem;
-  max-width: 60rem;
-  font-family: "Noto Sans JP", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
-  -webkit-transform: translateY(-45%);
-          transform: translateY(-45%);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  border: solid 2px transparent;
-  background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  border-radius: 3rem;
-  padding: 2rem 4rem;
-}
-
-#main #card #bio h2,
-#main #card #bio h3 {
+h2 {
   font-size: 5rem;
   color: #2d2d2d;
 }
 
-#main #card #bio h3 {
+h3 {
   font-size: 2rem;
-  margin-top: 1rem;
+  color: #2d2d2d;
 }
 
-#main #card #bio p {
+p {
   font-size: 1.5rem;
   color: #373737;
 }
 
-#main #card #bio ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 2.5rem;
-  width: 8.5rem;
+#outline {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+      grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+  -ms-grid-rows: 20% minmax(400px, 600px) 20%;
+      grid-template-rows: 20% minmax(400px, 600px) 20%;
 }
 
-#main #card #bio ul a {
-  color: #464646;
-}
-
-#main #card #bio ul li {
-  border-radius: 50%;
-  padding: 0rem 0.8rem;
-  padding-bottom: 0.2rem;
-}
-
-#main #card #bio ul li:hover {
-  background-color: #f6a190;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 50%;
-}
-
-#main #card #bio ul li:hover a {
-  color: white;
-}
-
-#main #bg {
+#outline #bg {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -195,26 +49,76 @@ html {
   z-index: -1;
 }
 
-#main #skills {
-  -ms-grid-row: 3;
+#outline nav {
+  -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-area: 3 / 2 / span 1 / span 1;
+  grid-area: 1 / 2 / span 1 / span 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Noto Sans JP", sans-serif;
+  z-index: 2;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
 }
 
-#main #skills div {
+#outline nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 2rem;
+  padding: 2rem 4rem;
+}
+
+#outline nav ul li {
+  margin: 2rem 2rem;
+}
+
+#outline nav ul li a {
+  text-decoration: none;
+  color: #464646;
+  font-weight: 700;
+}
+
+#outline nav ul li a:hover {
+  color: #f6a190;
+}
+
+#outline #focus {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 1 / span 4 / span 4;
+  overflow: scroll;
+}
+
+#outline #focus #about {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,7 +132,35 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 20rem;
+}
+
+#outline #focus #about #headshot {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  -webkit-transform: translate(-75%, -20%);
+          transform: translate(-75%, -20%);
+}
+
+#outline #focus #about #headshot img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+#outline #focus #about #card {
+  min-width: 40rem;
+  max-width: 60rem;
+  font-family: "Noto Sans JP", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: translateY(-40%);
           transform: translateY(-40%);
   background: rgba(255, 255, 255, 0.2);
@@ -242,15 +174,90 @@ html {
   padding: 2rem 4rem;
 }
 
-#main #skills div h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  color: #2d2d2d;
+#outline #focus #about #card ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.5rem;
+  width: 8.5rem;
 }
 
-#main #skills div ul {
+#outline #focus #about #card ul a {
+  color: #464646;
+}
+
+#outline #focus #about #card ul li {
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+#outline #focus #about #card ul li:hover {
+  background-color: #f6a190;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+#outline #focus #about #card ul li:hover a {
+  color: white;
+}
+
+#outline #focus #skills {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outline #focus #skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 3rem;
+  padding: 2rem 4rem;
+}
+
+#outline #focus #skills div h2 {
+  margin-bottom: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#outline #focus #skills div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,11 +273,11 @@ html {
           align-items: center;
 }
 
-#main #skills div ul i {
+#outline #focus #skills div ul i {
   font-size: 5rem;
 }
 
-#main #skills div ul li {
+#outline #focus #skills div ul li {
   margin: 0rem 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,5 +290,70 @@ html {
       -ms-flex-align: center;
           align-items: center;
   color: #464646;
+}
+
+#outline #focus #projectpage {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outline #focus #projectpage h2 {
+  margin-bottom: 2rem;
+}
+
+#outline #focus #projectpage #projectholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 30%;
+}
+
+#outline #focus #projectpage #projectholder .project {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 20rem;
+          flex: 1 20rem;
+  max-width: 40rem;
+  border-radius: 3rem;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#outline #focus #projectpage #projectholder .one {
+  background-color: #f6a190;
+}
+
+#outline #focus #projectpage #projectholder .two {
+  background-color: #f0e894;
+}
+
+#outline #focus #projectpage #projectholder .three {
+  background-color: #8dc7d3;
 }
 /*# sourceMappingURL=styles.css.map */
