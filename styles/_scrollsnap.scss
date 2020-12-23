@@ -1,0 +1,10 @@
+#focus {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+    #about,
+    #skills,
+    #projectpage {
+        scroll-snap-align: start;
+    }
+}

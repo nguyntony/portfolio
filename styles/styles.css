@@ -31,8 +31,8 @@ p {
   height: 100vh;
   -ms-grid-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
       grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
-  -ms-grid-rows: 20% minmax(400px, 600px) 20%;
-      grid-template-rows: 20% minmax(400px, 600px) 20%;
+  -ms-grid-rows: 20% 1fr 20%;
+      grid-template-rows: 20% 1fr 20%;
 }
 
 #outline #bg {
@@ -161,8 +161,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
   background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
@@ -313,25 +313,91 @@ p {
   margin-bottom: 2rem;
 }
 
-#outline #focus #projectpage #projectholder {
+#projectpage {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  height: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#outline #focus #projectpage #projectholder .project {
+#projectpage h2 {
+  margin-bottom: 2rem;
+}
+
+#projectpage #projectholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  padding: 0rem 2.5rem;
+}
+
+#projectpage #projectholder .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1 20rem;
           flex: 1 20rem;
+  min-width: 35rem;
   max-width: 40rem;
-  border-radius: 3rem;
+  padding: 2rem;
+  margin: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
   -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
           box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  padding: 2rem;
+  border-radius: 2rem;
+}
+
+#projectpage #projectholder .project h3 {
+  font-size: 3rem;
+}
+
+#projectpage #projectholder .project a {
+  text-decoration: none;
+  color: #5a6380;
+}
+
+#projectpage #projectholder .project a:hover {
+  color: white;
+}
+
+#projectpage #projectholder .project ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8.5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2.5rem;
+  margin-top: auto;
+}
+
+#projectpage #projectholder .project ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,18 +408,32 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
-#outline #focus #projectpage #projectholder .one {
-  background-color: #f6a190;
+#projectpage #projectholder .project ul li a {
+  color: #464646;
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
 }
 
-#outline #focus #projectpage #projectholder .two {
-  background-color: #f0e894;
+#projectpage #projectholder .project ul li a:hover {
+  background-color: #7786b9;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+  color: white;
 }
 
-#outline #focus #projectpage #projectholder .three {
-  background-color: #8dc7d3;
+#focus {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+#focus #about,
+#focus #skills,
+#focus #projectpage {
+  scroll-snap-align: start;
 }
 /*# sourceMappingURL=styles.css.map */
