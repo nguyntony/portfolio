@@ -11,10 +11,12 @@
 
     #projectholder {
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        justify-content: center;
+        width: 100vw;
         // height: 30%;
         padding: 0rem 2.5rem;
+        overflow: scroll;
+        margin: 5rem;
 
         .project {
             display: flex;

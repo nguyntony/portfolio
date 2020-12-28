@@ -91,6 +91,7 @@ $Noto: "Noto Sans JP", sans-serif;
                 min-width: 40rem;
                 max-width: 60rem;
                 font-family: $Noto;
+                margin: 0 5rem;
                 display: flex;
                 flex-direction: column;
                 transform: translateY(-45%);
@@ -147,6 +148,7 @@ $Noto: "Noto Sans JP", sans-serif;
                 justify-content: center;
                 align-items: center;
                 padding: 2rem;
+                margin: 5rem;
                 // height: 20rem;
                 // transform: translateY(-40%);
 
@@ -178,6 +180,7 @@ $Noto: "Noto Sans JP", sans-serif;
 
                     li {
                         margin: 0rem 2.5rem;
+                        padding: 1rem;
                         display: flex;
                         flex-direction: column;
                         align-items: center;

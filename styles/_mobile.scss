@@ -1,0 +1,34 @@
+@media screen and (max-width: 1200px) {
+    #outline #focus #projectpage {
+        #projectholder {
+            justify-content: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #outline #focus {
+        #about {
+            #headshot {
+                height: 25rem;
+                width: 25rem;
+                transform: none;
+            }
+
+            #card {
+                transform: none;
+                margin-top: 2rem;
+            }
+        }
+
+        #skills {
+            div {
+                ul {
+                    li {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
