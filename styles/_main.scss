@@ -5,7 +5,7 @@ $Noto: "Noto Sans JP", sans-serif;
     display: grid;
     height: 100vh;
     grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
-    grid-template-rows: 20% 1fr 20%;
+    grid-template-rows: 15% 1fr 15%;
 
     #bg {
         grid-area: 2 / 1 / span 1 / span 4;

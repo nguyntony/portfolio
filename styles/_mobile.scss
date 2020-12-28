@@ -8,6 +8,10 @@
             content: "";
             flex: 0 0 2.5rem;
         }
+
+        .arrow {
+            display: block;
+        }
     }
 }
 
@@ -31,6 +35,32 @@
                 ul {
                     li {
                         padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #outline #focus {
+        #about {
+            #card {
+                min-width: 30rem;
+                // margin: 2.5rem;
+            }
+        }
+
+        #skills {
+            div {
+                ul {
+                    i {
+                        font-size: 4rem;
+                    }
+
+                    li {
+                        font-size: 1.5rem;
+                        margin: 1rem;
                     }
                 }
             }
