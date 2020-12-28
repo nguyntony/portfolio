@@ -26,6 +26,8 @@ p {
     color: rgb(55, 55, 55);
 }
 
+@import "nav";
 @import "main";
 @import "projects";
 @import "scrollsnap";
+@import "contact";

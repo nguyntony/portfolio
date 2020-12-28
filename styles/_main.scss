@@ -17,49 +17,49 @@ $Noto: "Noto Sans JP", sans-serif;
         z-index: -1;
     }
 
-    nav {
-        grid-area: 1 / 2 / span 1 / span 1;
-        display: flex;
-        justify-content: flex-end;
-        // margin-right: 15rem;
-        align-items: center;
-        z-index: 2;
-        transform: translateY(40%);
+    // nav {
+    //     grid-area: 1 / 2 / span 1 / span 1;
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     // margin-right: 15rem;
+    //     align-items: center;
+    //     z-index: 2;
+    //     transform: translateY(40%);
 
-        ul {
-            // come back and clean this up
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            font-family: $Noto;
-            font-size: 2rem;
-            height: 8rem;
+    //     ul {
+    //         // come back and clean this up
+    //         list-style: none;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: flex-end;
+    //         font-family: $Noto;
+    //         font-size: 2rem;
+    //         height: 8rem;
 
-            // glassmorphism stuff
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(40px);
-            border: solid 2px transparent;
-            background-clip: padding-box;
-            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-            border-radius: 2rem;
-            padding: 2rem 4rem;
+    //         // glassmorphism stuff
+    //         background: rgba(255, 255, 255, 0.2);
+    //         backdrop-filter: blur(40px);
+    //         border: solid 2px transparent;
+    //         background-clip: padding-box;
+    //         box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+    //         border-radius: 2rem;
+    //         padding: 2rem 4rem;
 
-            li {
-                margin: 2rem 2rem;
+    //         li {
+    //             margin: 2rem 2rem;
 
-                a {
-                    text-decoration: none;
-                    color: rgb(70, 70, 70);
-                    font-weight: 700;
-                }
+    //             a {
+    //                 text-decoration: none;
+    //                 color: #464646;
+    //                 font-weight: 700;
+    //             }
 
-                a:hover {
-                    color: #f6a190;
-                }
-            }
-        }
-    }
+    //             a:hover {
+    //                 color: #f6a190;
+    //             }
+    //         }
+    //     }
+    // }
 
     #focus {
         // this will actually be the entire screen
@@ -187,47 +187,47 @@ $Noto: "Noto Sans JP", sans-serif;
             }
         }
 
-        #projectpage {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        // #projectpage {
+        // height: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
 
-            h2 {
-                margin-bottom: 2rem;
-            }
+        // h2 {
+        //     margin-bottom: 2rem;
+        // }
 
-            // #projectholder {
-            //     display: flex;
-            //     justify-content: space-around;
-            //     width: 100%;
-            //     height: 30%;
+        // #projectholder {
+        //     display: flex;
+        //     justify-content: space-around;
+        //     width: 100%;
+        //     height: 30%;
 
-            //     .project {
-            //         flex: 1 20rem;
-            //         max-width: 40rem;
-            //         border-radius: 3rem;
-            //         box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-            //         padding: 2rem;
-            //         display: flex;
-            //         flex-direction: column;
-            //         align-items: center;
-            //         position: relative;
-            //     }
+        //     .project {
+        //         flex: 1 20rem;
+        //         max-width: 40rem;
+        //         border-radius: 3rem;
+        //         box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+        //         padding: 2rem;
+        //         display: flex;
+        //         flex-direction: column;
+        //         align-items: center;
+        //         position: relative;
+        //     }
 
-            //     .one {
-            //         background-color: #f6a190;
-            //     }
+        //     .one {
+        //         background-color: #f6a190;
+        //     }
 
-            //     .two {
-            //         background-color: rgb(240, 232, 148);
-            //     }
+        //     .two {
+        //         background-color: rgb(240, 232, 148);
+        //     }
 
-            //     .three {
-            //         background-color: #8dc7d3;
-            //     }
-            // }
-        }
+        //     .three {
+        //         background-color: #8dc7d3;
+        //     }
+        // }
+        // }
     }
 }
