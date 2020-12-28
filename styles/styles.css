@@ -26,19 +26,11 @@ p {
 }
 
 nav {
-  height: 10vh;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  border: solid 2px transparent;
-  background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  border-radius: 3rem;
-  padding: 2rem 4rem;
+  height: 5rem;
+  background: thistle;
 }
 
-.nav-links {
+nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,19 +45,52 @@ nav {
   margin-left: auto;
 }
 
-.nav-links li a {
-  color: #464646;
+nav .nav-links li a {
   text-decoration: none;
   font-size: 2rem;
-  font-family: "Noto Sans JP", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links {
+@media screen and (max-width: 800px) {
+  .line {
+    width: 3rem;
+    height: 3px;
+    background: white;
+    margin: 0.5rem;
+  }
+  nav {
+    position: relative;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / span 1 / span 1;
+  }
+  nav .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 25%;
+    z-index: 1;
+  }
+  nav .nav-links {
     position: fixed;
-    background: sandybrown;
+    background: rosybrown;
     height: 100vh;
     width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: circle(10rem at 90% -15%);
+            clip-path: circle(10rem at 90% -15%);
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    pointer-events: none;
+  }
+  nav .nav-links.open {
+    -webkit-clip-path: circle(150rem at 90% -20%);
+            clip-path: circle(150rem at 90% -20%);
+    pointer-events: all;
   }
 }
 
@@ -298,7 +323,8 @@ nav {
 }
 
 #projectpage h2 {
-  margin-bottom: 2rem;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 #projectpage #projectholder {
@@ -486,6 +512,12 @@ nav {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+  }
+  #outline #focus #projectpage #projectholder::after {
+    content: "";
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 2.5rem;
+            flex: 0 0 2.5rem;
   }
 }
 
