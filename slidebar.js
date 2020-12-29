@@ -4,7 +4,7 @@ let toggle = false;
 
 tl.to(".ham", {
     background: "#e99685",
-    'borderRadius': "50% 0 0 50%"
+    'borderRadius': "40% 0 0 40%"
 });
 tl.to("nav", {
     "clipPath": "ellipse(100% 100% at 50% 50%)"
