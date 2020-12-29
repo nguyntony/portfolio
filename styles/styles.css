@@ -25,74 +25,78 @@ p {
   color: #373737;
 }
 
-nav {
-  height: 5rem;
-  background: thistle;
+header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / span 1 / span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 6rem;
+  height: 5.5rem;
+  -webkit-transform: translate(-50%, 115%);
+          transform: translate(-50%, 115%);
+  z-index: 10;
+  margin: auto;
 }
 
-nav .nav-links {
+header .ham {
+  padding: 1em;
+  border-radius: 100%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  -webkit-box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+          box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+}
+
+header img {
+  width: 100%;
+  max-width: 5.5rem;
+}
+
+nav {
+  border-radius: 0 5em 5em 0;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  -webkit-box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+          box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+  -webkit-clip-path: ellipse(50% 50% at -50% 50%);
+          clip-path: ellipse(50% 50% at -50% 50%);
+}
+
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  width: 50%;
-  height: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
+  padding: 0 1em;
 }
 
-nav .nav-links li a {
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  border-radius: 50%;
   text-decoration: none;
   font-size: 2rem;
+  color: #464646;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
-@media screen and (max-width: 800px) {
-  .line {
-    width: 3rem;
-    height: 3px;
-    background: white;
-    margin: 0.5rem;
-  }
-  nav {
-    position: relative;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-area: 1 / 2 / span 1 / span 1;
-    z-index: 3;
-  }
-  nav .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 25%;
-    z-index: 1;
-  }
-  nav .nav-links {
-    position: fixed;
-    background: rosybrown;
-    height: 100vh;
-    width: 100vw;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-clip-path: circle(10rem at 90% -15%);
-            clip-path: circle(10rem at 90% -15%);
-    -webkit-transition: all 0.8s ease-out;
-    transition: all 0.8s ease-out;
-    pointer-events: none;
-  }
-  nav .nav-links.open {
-    -webkit-clip-path: circle(150rem at 90% -20%);
-            clip-path: circle(150rem at 90% -20%);
-    pointer-events: all;
-  }
+nav ul li a:hover {
+  color: #d48272;
 }
 
 #outline {
@@ -421,8 +425,11 @@ nav .nav-links li a {
   color: white;
 }
 
-#projectpage .arrow {
-  display: none;
+#projectpage .arrow i {
+  color: #3a3a3a;
+  font-size: 2.5rem;
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
 }
 
 #focus {
@@ -513,7 +520,7 @@ nav .nav-links li a {
   color: white;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1550px) {
   #outline #focus #projectpage #projectholder {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
@@ -531,9 +538,12 @@ nav .nav-links li a {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    margin: 0;
+    -webkit-transform: translate(-100%, 200%);
+            transform: translate(-100%, 200%);
+  }
   #outline #focus #about #headshot {
-    height: 25rem;
-    width: 25rem;
     -webkit-transform: none;
             transform: none;
   }
@@ -547,7 +557,29 @@ nav .nav-links li a {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
+  h2 {
+    font-size: 4.5rem;
+  }
+  header {
+    height: 5rem;
+    -webkit-transform: translate(-125%, 180%);
+            transform: translate(-125%, 180%);
+  }
+  header img {
+    max-width: 5rem;
+  }
+  nav ul {
+    padding: 0 0.5em;
+  }
+  nav ul li a {
+    font-size: 1.5rem;
+    padding: 0.8em 0.5em;
+  }
+  #outline #focus #about #headshot {
+    height: 22rem;
+    width: 22rem;
+  }
   #outline #focus #about #card {
     min-width: 30rem;
   }

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1550px) {
     #outline #focus #projectpage {
         #projectholder {
             justify-content: unset;
@@ -16,11 +16,14 @@
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        margin: 0;
+        transform: translate(-100%, 200%);
+    }
+
     #outline #focus {
         #about {
             #headshot {
-                height: 25rem;
-                width: 25rem;
                 transform: none;
             }
 
@@ -42,9 +45,38 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    header {
+        height: 5rem;
+        transform: translate(-125%, 180%);
+
+        img {
+            max-width: 5rem;
+        }
+    }
+
+    nav {
+        ul {
+            padding: 0 0.5em;
+
+            li a {
+                font-size: 1.5rem;
+                padding: 0.8em 0.5em;
+            }
+        }
+    }
+
     #outline #focus {
         #about {
+            #headshot {
+                height: 22rem;
+                width: 22rem;
+            }
+
             #card {
                 min-width: 30rem;
                 // margin: 2.5rem;
