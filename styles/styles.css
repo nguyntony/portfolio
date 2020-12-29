@@ -36,8 +36,8 @@ header {
   display: flex;
   width: 6rem;
   height: 5.5rem;
-  -webkit-transform: translate(-50%, 115%);
-          transform: translate(-50%, 115%);
+  -webkit-transform: translate(-120%, 115%);
+          transform: translate(-120%, 115%);
   z-index: 10;
   margin: auto;
 }
