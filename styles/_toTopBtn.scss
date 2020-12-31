@@ -1,0 +1,27 @@
+#toTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+
+    background: black;
+    border-radius: 100%;
+    // background: #e99685;
+    transform: scale(1);
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+
+    a {
+        font-size: 4rem;
+        color: rgb(70, 70, 70);
+    }
+}

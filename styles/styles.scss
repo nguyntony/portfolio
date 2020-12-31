@@ -9,6 +9,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     // removes any default styling the browser may have
+    scroll-behavior: smooth;
 }
 
 h2 {
@@ -32,3 +33,4 @@ p {
 @import "scrollsnap";
 @import "contact";
 @import "mobile";
+@import "toTopBtn";
