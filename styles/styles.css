@@ -179,9 +179,9 @@ nav ul li a:hover {
           flex-direction: column;
   -webkit-transform: translateY(-45%);
           transform: translateY(-45%);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border: solid 2px transparent;
   background-clip: padding-box;
   -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
@@ -607,7 +607,7 @@ nav ul li a:hover {
   position: fixed;
   bottom: 2rem;
   right: 4rem;
-  background: black;
+  background: unset;
   border-radius: 100%;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -616,8 +616,8 @@ nav ul li a:hover {
 }
 
 #toTop:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -625,5 +625,13 @@ nav ul li a:hover {
 #toTop a {
   font-size: 4rem;
   color: #464646;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#toTop a:hover {
+  color: #2d2d2d;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 /*# sourceMappingURL=styles.css.map */
