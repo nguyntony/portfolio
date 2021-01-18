@@ -1,20 +1,3 @@
-@media screen and (max-width: 1550px) {
-    #outline #focus #projectpage {
-        #projectholder {
-            justify-content: unset;
-        }
-
-        #projectholder::after {
-            content: "";
-            flex: 0 0 2.5rem;
-        }
-
-        .arrow {
-            display: block;
-        }
-    }
-}
-
 @media screen and (max-width: 1275px) {
     #outline #focus #projectpage {
         #projectholder {
@@ -124,5 +107,12 @@
                 transform: translateY(60%);
             }
         }
+    }
+}
+
+@media screen and (max-height: 800px) {
+    #focus {
+        scroll-snap-type: unset;
+        overflow-y: unset;
     }
 }

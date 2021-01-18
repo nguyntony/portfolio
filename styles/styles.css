@@ -509,23 +509,6 @@ nav ul li a:hover {
   color: white;
 }
 
-@media screen and (max-width: 1550px) {
-  #outline #focus #projectpage #projectholder {
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-  }
-  #outline #focus #projectpage #projectholder::after {
-    content: "";
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 2.5rem;
-            flex: 0 0 2.5rem;
-  }
-  #outline #focus #projectpage .arrow {
-    display: block;
-  }
-}
-
 @media screen and (max-width: 1275px) {
   #outline #focus #projectpage #projectholder {
     -webkit-box-orient: vertical;
@@ -607,6 +590,14 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-height: 800px) {
+  #focus {
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+    overflow-y: unset;
+  }
+}
+
 #toTop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,7 +612,7 @@ nav ul li a:hover {
   width: 5rem;
   position: fixed;
   bottom: 2rem;
-  right: 4rem;
+  right: 2rem;
   background: unset;
   border-radius: 100%;
   -webkit-transform: scale(1);
