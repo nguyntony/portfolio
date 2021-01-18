@@ -17,8 +17,13 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #2d2d2d;
+}
+
+h4 {
+  font-size: 2rem;
+  color: #373737;
 }
 
 p {
@@ -29,30 +34,27 @@ p {
 header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 2 / span 1 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / span 1 / span 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 6rem;
   height: 5.5rem;
-  -webkit-transform: translate(-120%, 115%);
-          transform: translate(-120%, 115%);
   z-index: 10;
-  margin: auto;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 header .ham {
   padding: 1em;
   border-radius: 100%;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
+  background: #f1a393;
   border: solid 2px transparent;
-  -webkit-box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
-          box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+  -webkit-box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+          box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
 }
 
 header img {
@@ -62,12 +64,11 @@ header img {
 
 nav {
   border-radius: 0 2rem 2rem 0;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
   border: solid 2px transparent;
-  -webkit-box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
-          box-shadow: 5px 5px 5px rgba(46, 54, 68, 0.3);
+  -webkit-box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+          box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+  z-index: 20;
+  background: white;
   -webkit-clip-path: ellipse(50% 50% at -50% 50%);
           clip-path: ellipse(50% 50% at -50% 50%);
 }
@@ -369,10 +370,6 @@ nav ul li a:hover {
   border-radius: 2rem;
 }
 
-#projectpage #projectholder .project h3 {
-  font-size: 3rem;
-}
-
 #projectpage #projectholder .project a {
   text-decoration: none;
   color: #5a6380;
@@ -422,13 +419,6 @@ nav ul li a:hover {
   transition: 0.3s;
   border-radius: 50%;
   color: white;
-}
-
-#projectpage .arrow i {
-  color: #3a3a3a;
-  font-size: 2.5rem;
-  -webkit-transform: translateY(-80%);
-          transform: translateY(-80%);
 }
 
 #focus {
@@ -536,12 +526,20 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    margin: 0;
-    -webkit-transform: translate(-100%, 200%);
-            transform: translate(-100%, 200%);
+@media screen and (max-width: 1275px) {
+  #outline #focus #projectpage #projectholder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 3.5rem;
   }
+}
+
+@media screen and (max-width: 768px) {
   #outline #focus #about #headshot {
     -webkit-transform: none;
             transform: none;
@@ -558,12 +556,19 @@ nav ul li a:hover {
 
 @media screen and (max-width: 499px) {
   h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    color: #2d2d2d;
+  }
+  h3 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+  }
+  p {
+    font-size: 1.5rem;
+    color: #373737;
   }
   header {
     height: 5rem;
-    -webkit-transform: translate(-125%, 180%);
-            transform: translate(-125%, 180%);
   }
   header img {
     max-width: 5rem;
@@ -575,12 +580,19 @@ nav ul li a:hover {
     font-size: 1.5rem;
     padding: 0.8em 0.5em;
   }
+  #outline #toTop {
+    right: 1rem;
+    bottom: 1rem;
+  }
   #outline #focus #about #headshot {
     height: 22rem;
     width: 22rem;
   }
   #outline #focus #about #card {
-    min-width: 30rem;
+    min-width: 35rem;
+  }
+  #outline #focus #skills div {
+    min-width: 35rem;
   }
   #outline #focus #skills div ul i {
     font-size: 4rem;
@@ -588,6 +600,10 @@ nav ul li a:hover {
   #outline #focus #skills div ul li {
     font-size: 1.5rem;
     margin: 1rem;
+  }
+  #outline #focus #projectpage h2 {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
   }
 }
 

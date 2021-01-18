@@ -3,7 +3,7 @@ let tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 let toggle = false;
 
 tl.to(".ham", {
-    background: "#e99685",
+    background: "f1a393",
     borderRadius: "40% 0 0 40%",
 });
 tl.to(
