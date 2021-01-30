@@ -1,118 +1,122 @@
 @media screen and (max-width: 1275px) {
-    #outline #focus #projectpage {
-        #projectholder {
-            flex-direction: column;
-            align-items: center;
-            margin: 3.5rem;
-        }
+  #outline #focus #projectpage {
+    #projectholder {
+      flex-direction: column;
+      align-items: center;
+      margin: 3.5rem;
     }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    #outline #focus {
-        #about {
-            #headshot {
-                transform: none;
-            }
+  #outline #focus {
+    #about {
+      #headshot {
+        transform: none;
+      }
 
-            #card {
-                transform: none;
-                margin-top: 2rem;
-            }
-        }
+      #card {
+        transform: none;
+        margin-top: 2rem;
 
-        #skills {
-            div {
-                ul {
-                    li {
-                        padding: 1rem;
-                    }
-                }
-            }
+        ul.seq {
+          margin-top: 1rem;
         }
+      }
     }
+
+    #skills {
+      div {
+        ul {
+          li {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 499px) {
-    h2 {
-        font-size: 4rem;
-        color: rgb(45, 45, 45);
-    }
+  h2 {
+    font-size: 4rem;
+    color: rgb(45, 45, 45);
+  }
 
-    h3 {
-        font-size: 2.5rem;
-        color: rgb(45, 45, 45);
-    }
+  h3 {
+    font-size: 2.5rem;
+    color: rgb(45, 45, 45);
+  }
 
-    p {
+  p {
+    font-size: 1.5rem;
+    color: rgb(55, 55, 55);
+  }
+
+  header {
+    height: 5rem;
+
+    img {
+      max-width: 5rem;
+    }
+  }
+
+  nav {
+    ul {
+      padding: 0 0.5em;
+
+      li a {
         font-size: 1.5rem;
-        color: rgb(55, 55, 55);
+        padding: 0.8em 0.5em;
+      }
+    }
+  }
+
+  #outline #toTop {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  #outline #focus {
+    #about {
+      #headshot {
+        height: 23rem;
+        width: 23rem;
+      }
+
+      #card {
+        min-width: 35rem;
+      }
     }
 
-    header {
-        height: 5rem;
+    #skills {
+      div {
+        min-width: 35rem;
 
-        img {
-            max-width: 5rem;
-        }
-    }
-
-    nav {
         ul {
-            padding: 0 0.5em;
+          i {
+            font-size: 4rem;
+          }
 
-            li a {
-                font-size: 1.5rem;
-                padding: 0.8em 0.5em;
-            }
+          li {
+            font-size: 1.5rem;
+            margin: 1rem;
+          }
         }
+      }
     }
 
-    #outline #toTop {
-        right: 1rem;
-        bottom: 1rem;
+    #projectpage {
+      h2 {
+        transform: translateY(60%);
+      }
     }
-
-    #outline #focus {
-        #about {
-            #headshot {
-                height: 22rem;
-                width: 22rem;
-            }
-
-            #card {
-                min-width: 35rem;
-            }
-        }
-
-        #skills {
-            div {
-                min-width: 35rem;
-
-                ul {
-                    i {
-                        font-size: 4rem;
-                    }
-
-                    li {
-                        font-size: 1.5rem;
-                        margin: 1rem;
-                    }
-                }
-            }
-        }
-
-        #projectpage {
-            h2 {
-                transform: translateY(60%);
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-height: 800px) {
-    #focus {
-        scroll-snap-type: unset;
-        overflow-y: unset;
-    }
+  #focus {
+    scroll-snap-type: unset;
+    overflow-y: unset;
+  }
 }

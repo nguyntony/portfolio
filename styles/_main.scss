@@ -1,147 +1,152 @@
 $Noto: "Noto Sans JP", sans-serif;
 
 #outline {
-    // this is the outline that will have the grid set up
-    display: grid;
-    height: 100vh;
-    grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
-    grid-template-rows: 15% 1fr 15%;
+  // this is the outline that will have the grid set up
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+  grid-template-rows: 15% 1fr 15%;
 
-    #bg {
-        grid-area: 2 / 1 / span 1 / span 4;
-        background: url(/images/bg.jpg);
-        background-repeat: no-repeat;
-        background-position: 0% 55%;
-        background-size: 2000px;
-        position: relative;
-        z-index: -1;
+  #bg {
+    grid-area: 2 / 1 / span 1 / span 4;
+    background: url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 55%;
+    // background-size: 2000px;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+  }
+
+  #focus {
+    // this will actually be the entire screen
+    grid-area: 1 / 1 / span 4 / span 4;
+    overflow: scroll;
+
+    #about {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #headshot {
+        height: 30rem;
+        width: 30rem;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid transparent;
+        transform: translate(-75%, -20%);
+
+        img {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+
+      #card {
+        min-width: 40rem;
+        max-width: 60rem;
+        font-family: $Noto;
+        margin: 0 5rem;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-45%);
+
+        // glass
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: solid 2px transparent;
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+        border-radius: 3rem;
+        padding: 2rem 4rem;
+
+        ul {
+          list-style: none;
+          display: flex;
+          align-self: flex-end;
+          justify-content: space-around;
+          font-size: 2.5rem;
+          width: 8.5rem;
+
+          a {
+            color: rgb(70, 70, 70);
+          }
+
+          li {
+            border-radius: 50%;
+            padding: 0rem 0.8rem;
+            padding-bottom: 0.2rem;
+          }
+
+          li:hover {
+            background-color: #f6a190;
+            transition: 0.3s;
+            border-radius: 50%;
+            a {
+              color: white;
+            }
+          }
+        }
+      }
     }
 
-    #focus {
-        // this will actually be the entire screen
-        grid-area: 1 / 1 / span 4 / span 4;
-        overflow: scroll;
+    #skills {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-        #about {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 5rem;
+        max-width: 60rem;
 
-            #headshot {
-                height: 30rem;
-                width: 30rem;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 2px solid transparent;
-                transform: translate(-75%, -20%);
+        // glassmorphism stuff
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        border: solid 2px transparent;
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+        border-radius: 3rem;
+        padding: 5rem 0;
 
-                img {
-                    object-fit: contain;
-                    width: 100%;
-                }
-            }
-
-            #card {
-                min-width: 40rem;
-                max-width: 60rem;
-                font-family: $Noto;
-                margin: 0 5rem;
-                display: flex;
-                flex-direction: column;
-                transform: translateY(-45%);
-
-                // glass
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(20px);
-                border: solid 2px transparent;
-                background-clip: padding-box;
-                box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-                border-radius: 3rem;
-                padding: 2rem 4rem;
-
-                ul {
-                    list-style: none;
-                    display: flex;
-                    align-self: flex-end;
-                    justify-content: space-around;
-                    font-size: 2.5rem;
-                    width: 8.5rem;
-
-                    a {
-                        color: rgb(70, 70, 70);
-                    }
-
-                    li {
-                        border-radius: 50%;
-                        padding: 0rem 0.8rem;
-                        padding-bottom: 0.2rem;
-                    }
-
-                    li:hover {
-                        background-color: #f6a190;
-                        transition: 0.3s;
-                        border-radius: 50%;
-                        a {
-                            color: white;
-                        }
-                    }
-                }
-            }
+        h2 {
+          transform: translateY(40%);
         }
 
-        #skills {
-            height: 100%;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          list-style: none;
+          font-size: 1.5rem;
+          align-items: center;
+
+          i {
+            font-size: 5rem;
+          }
+
+          li {
+            margin: 0.5rem 3rem;
+            padding: 1rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            color: rgb(70, 70, 70);
 
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 2rem;
-                margin: 5rem;
-
-                // glassmorphism stuff
-                background: rgba(255, 255, 255, 0.2);
-                backdrop-filter: blur(40px);
-                border: solid 2px transparent;
-                background-clip: padding-box;
-                box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-                border-radius: 3rem;
-                padding: 2rem 4rem;
-
-                h2 {
-                    margin-bottom: 2rem;
-                    align-self: flex-start;
-                }
-
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    list-style: none;
-                    font-size: 1.5rem;
-                    align-items: center;
-
-                    i {
-                        font-size: 5rem;
-                    }
-
-                    li {
-                        margin: 0rem 2.5rem;
-                        padding: 1rem;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        color: rgb(70, 70, 70);
-                    }
-                }
+            img {
+              width: 5rem;
             }
+          }
         }
+      }
     }
+  }
 }
